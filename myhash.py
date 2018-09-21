@@ -3,7 +3,7 @@
 # 
 #   to use this file type
 # 
-#   pip install ImageHash
+#   pip install imagehash
 #
 
 from PIL import Image

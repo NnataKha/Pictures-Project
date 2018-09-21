@@ -19,7 +19,7 @@ pip install imagehash
 To create new branch for specific issue
 
 ```
-git checkout -b issue8
+git checkout -b issueNNN
 ```
 
 To commit changes to specific branch

@@ -1,20 +1,20 @@
 import cv2
-
 face_cascade = cv2.CascadeClassifier('C:\\Users\\mika\\Anaconda3\\Lib\\site-packages\\cv2\\data\\haarcascade_frontalface_default.xml')
 
-def face_detect(file):
-    img = cv2.imread(file)
+def read(file):
+    return cv2.imread(file)
+
+def face_detect(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 3)
     for (x,y,w,h) in faces:
         cv2.rectangle(gray,(x,y),(x+w,y+h),(255,0,0),1)
     return gray
 
-def is_face(file):
-    img = cv2.imread(file)
+def is_face(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-    return faces is ()
+    return not faces is ()
 
 if __name__ == "__main__":
     import sys

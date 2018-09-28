@@ -1,6 +1,6 @@
 # Pictures-Project
 
-Pictures-Project is a data mining project for visual projections
+Pictures-Project is a data mining project for visual projections. The dataset is downloaded from https://www.kaggle.com/lalitharajesh/face-recognition-celebrity-faces-identification/data
 
 ## Getting Started
 

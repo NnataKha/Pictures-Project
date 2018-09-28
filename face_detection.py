@@ -16,6 +16,13 @@ def is_face(img):
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     return not faces is ()
 
+def crop(img):
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 3)
+    for (x,y,w,h) in faces:
+        cropped_img = gray[y:y+h, x:x+w]
+    return cropped_img  
+
 if __name__ == "__main__":
     import sys
     imgray = face_detect(sys.argv[1])
